@@ -61,14 +61,17 @@
 		   <p style="border-bottom: 2px solid black;"> <p> <!-- adds a line to make it look organized and this is the second line -->
 		   <br>
 		   <br>
-		   
+
+	           <audio id="soundPlayer"></audio>
 		   
 		   <script>
+			   const formsubmittedsound= `FormSubmitted.mp3`
 		           const button= document.getElementById("buttonpressed");
 				   
 				   function pressed() {
 				   
 				   alert("Your Form Has Been Submitted!")
+				   formsubmittedsound.Play()
 				   
 				   }
 		   </script>
