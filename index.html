@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Application Form</title>
+</head>
+<body>
+    <h2>Minecraft Application Form</h2>
+    <form id="applicationForm">
+        <label>Aternos Username:</label><br>
+        <input type="text" name="aternosname" required><br><br>
+
+        <label>Minecraft Username:</label><br>
+        <input type="text" name="minecraftusername" required><br><br>
+
+        <label>Building Skill:</label><br>
+        <input type="text" name="buildinginfo" required><br><br>
+
+        <label>PvP Rating:</label><br>
+        <input type="text" name="pvpinfo" required><br><br>
+
+        <label>Likes Survival:</label><br>
+        <input type="text" name="survivalinfo" required><br><br>
+
+        <label>Playing Since:</label><br>
+        <input type="text" name="playinginfo" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            const response = await fetch("/submit", {
+                method: "POST",
+                body: new URLSearchParams(formData)
+            });
+
+            const result = await response.text();
+            document.getElementById("status").innerText = result;
+        });
+    </script>
+</body>
+</html>
