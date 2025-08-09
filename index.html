@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+      <head>
+	        <title> Fill the Form </title>
+			<link rel="stylesheet" href="externalsheet.css">
+	  </head>
+	  
+	  <body>
+	       <h2> Fill The Form: </h2>
+		   
+		   <p style="border-bottom: 2px solid black;"> <p> <!-- adds a line to make it look organized and this is the first line, add things in between this.-->
+		   
+		   <h5> What is your Aternos.org username? </h5>
+		   
+		   <form>
+		        <label id="aternosname"> Enter your name: </label>
+		        <input class="typingplace" type="text" name="YesOrNo" value="" id="aternosname">
+		   </form>
+		   
+		   <h5> What is your minecraft username? </h5>
+		   
+		   <form>
+		        <label id="minecraftusername"> Enter your name: </label>
+		        <input class="typingplace" type="text" name="YesOrNo" value="" id="minecraftusername">
+		   
+		   <h5> How good are you at building in Minecraft? </h5>
+		   
+		        <label id="buildinginfo"> Answer: </label>
+		        <input class="typingplace" type="text" name="YesOrNo" value="" id="buildinginfo">
+		   
+		   <h5> On a scale of 1–10, how’s your PvP game? </h5>
+		   
+		        <label id="pvpinfo"> Answer: </label>
+		        <input class="typingplace" type="number" name="YesOrNo" value="" id="pvpinfo" min="1" max="10">
+		   
+		   <h5> Do you like playing survival? </h5>
+		   
+		        <label id="survivalinfoyes"> Yes: </label>
+		        <input class="typingplace" type="radio" name="YesOrNo" value="" id="survivalinfoyes">
+			    <label id="survivalinfono"> No: </label>
+				<input class="typingplace" type="radio" name="YesOrNo" value="" id="survivalinfono">
+		   
+		   <h5> How long have you been playing Minecraft? </h5>
+		   
+		        <label id="playinginfo"> Answer: </label>
+		        <input class="typingplace" type="text" name="YesOrNo" value="" id="playinginfo">
+		   </form>
+		   
+		   <br>
+		   
+		   <button type="Submit" value="Submit" class="submitbutton" id="buttonpressed" onclick="pressed()"> Submit Form </button>
+		   
+		   <p style="border-bottom: 2px solid black;"> <p> <!-- adds a line to make it look organized and this is the second line -->
+		   <br>
+		   <br>
+		   
+		   
+		   <script>
+		           const button= document.getElementById("buttonpressed");
+				   
+				   function pressed() {
+				   
+				   alert("Your Form Has Been Submitted!")
+				   
+				   }
+		   </script>
+		   
+	  </body>
+</html>
